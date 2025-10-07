@@ -9,13 +9,11 @@ const MAIL_TO = "hello@sinclairrestoration.com";
 interface RequestCallbackPanelProps {
   title?: string;
   subtitle?: string;
-  showAvatar?: boolean;
 }
 
 export default function RequestCallbackPanel({ 
   title = "Call or text our team and we can help asap.",
-  subtitle = "This goes to a cell phone. We pick up or respond fast",
-  showAvatar = true 
+  subtitle = "This goes to a cell phone. We pick up or respond fast"
 }: RequestCallbackPanelProps) {
   const [form, setForm] = useState({
     name: "",

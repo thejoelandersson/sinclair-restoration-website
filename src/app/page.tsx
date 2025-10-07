@@ -1,31 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import Marquee from '@/components/Marquee';
 import CTA from '@/components/CTA';
 
 export default function Home() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
 
 
 
@@ -161,7 +139,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "Old French Quarter houses are tricky, and mine&apos;s no exception. After the summer storms, I noticed a smell I couldn&apos;t shake. Sinclair showed up on time, explained everything in plain English, and got it handled. Haven&apos;t had a problem since. Worth every penny."
+                &quot;Old French Quarter houses are tricky, and mine&apos;s no exception. After the summer storms, I noticed a smell I couldn&apos;t shake. Sinclair showed up on time, explained everything in plain English, and got it handled. Haven&apos;t had a problem since. Worth every penny.&quot;
               </p>
             </div>
 
@@ -181,7 +159,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "These guys actually answer the phone, which is rare. They came out the same week, checked the crawl space, and showed me where moisture was building. It&apos;s been two months and everything&apos;s dry. I&apos;d recommend them to anyone dealing with this Louisiana humidity."
+                &quot;These guys actually answer the phone, which is rare. They came out the same week, checked the crawl space, and showed me where moisture was building. It&apos;s been two months and everything&apos;s dry. I&apos;d recommend them to anyone dealing with this Louisiana humidity.&quot;
               </p>
             </div>
 
@@ -201,7 +179,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "Sinclair Restoration saved me after my AC leak. I thought I&apos;d need new drywall, but they cleaned it up, tested, and said I caught it early. Super honest, no upsell. I keep their number saved now just in case."
+                &quot;Sinclair Restoration saved me after my AC leak. I thought I&apos;d need new drywall, but they cleaned it up, tested, and said I caught it early. Super honest, no upsell. I keep their number saved now just in case.&quot;
               </p>
             </div>
 
@@ -221,7 +199,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "Finally found a company that doesn&apos;t treat you like just another job. The tech actually took time to explain what he was seeing under the flooring. They worked around my schedule and left the place spotless. That&apos;s rare down here."
+                &quot;Finally found a company that doesn&apos;t treat you like just another job. The tech actually took time to explain what he was seeing under the flooring. They worked around my schedule and left the place spotless. That&apos;s rare down here.&quot;
               </p>
             </div>
 
@@ -241,7 +219,7 @@ export default function Home() {
                   </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "My wife and I were shocked at how fast they worked. The air test came back clean, and the smell that had been in our hallway for months is gone. I don&apos;t usually write reviews, but this one deserves it."
+                &quot;My wife and I were shocked at how fast they worked. The air test came back clean, and the smell that had been in our hallway for months is gone. I don&apos;t usually write reviews, but this one deserves it.&quot;
               </p>
             </div>
 
@@ -261,7 +239,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[#0F0F10] leading-relaxed">
-                "After last year&apos;s storm, I had no idea where to start. They walked me through insurance photos, handled the cleanup, and even checked back a week later. You can tell they actually care about people&apos;s homes, not just closing jobs."
+                &quot;After last year&apos;s storm, I had no idea where to start. They walked me through insurance photos, handled the cleanup, and even checked back a week later. You can tell they actually care about people&apos;s homes, not just closing jobs.&quot;
               </p>
             </div>
           </div>
