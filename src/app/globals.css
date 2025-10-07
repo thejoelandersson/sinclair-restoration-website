@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg:        #F5F0E8;  /* page background */
+  --bg-soft:   #EEE7DD;  /* section bands */
+  --surface:   #FFFFFF;  /* cards */
+  --panel:     #E7E2DA;  /* callback panel */
+  --panel-brd: #F3EEE8;  /* thin borders */
+  --ink:       #0F0F10;  /* main text */
+  --ink-soft:  rgba(15,15,16,0.72);
 }
 
 @theme inline {
@@ -20,7 +27,11 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, var(--bg) 0%, #F0E9DF 100%);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
 }
+
+.surface { background-color: var(--surface); }
+.panel   { background-color: var(--panel); border: 1px solid var(--panel-brd); }
+.band    { background-color: var(--bg-soft); }
