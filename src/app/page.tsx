@@ -43,15 +43,15 @@ export default function Home() {
                   />
                   
                   {/* Overlay Stat Box */}
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-sm border border-white/20 w-[180px]">
+                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-sm border border-white/20 w-[140px] sm:w-[160px] lg:w-[180px]">
                     <div className="text-left h-full flex flex-col justify-center">
-                      <p className="text-[16px] font-semibold tracking-[-0.01em] text-[#0F0F10] leading-tight mb-1">
+                      <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-semibold tracking-[-0.01em] text-[#0F0F10] leading-tight mb-1">
                         Guaranteed<br />effective
                       </p>
-                      <p className="text-[42px] font-bold text-[#0F0F10] leading-none mb-1">
+                      <p className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[#0F0F10] leading-none mb-1">
                         99.9%
                       </p>
-                      <p className="text-[12px] text-[#3A3A3C] leading-tight">
+                      <p className="text-[10px] sm:text-[11px] lg:text-[12px] text-[#3A3A3C] leading-tight">
                         of mold destroyed<br />without harsh chemicals
                       </p>
                     </div>
