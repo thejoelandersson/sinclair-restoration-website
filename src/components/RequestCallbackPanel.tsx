@@ -105,7 +105,7 @@ export default function RequestCallbackPanel({
             name="name"
             value={form.name}
             onChange={onChange}
-            className="h-14 w-full rounded-[12px] border-subtle bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
+            className="h-14 w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
             placeholder="Enter full name"
           />
           {errors.name && <p className="text-sm text-red-600 mt-2">{errors.name}</p>}
@@ -119,7 +119,7 @@ export default function RequestCallbackPanel({
             name="phone"
             value={form.phone}
             onChange={onChange}
-            className="h-14 w-full rounded-[12px] border-subtle bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
+            className="h-14 w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
             placeholder="(615) 555-5555"
           />
           {errors.phone && <p className="text-sm text-red-600 mt-2">{errors.phone}</p>}
@@ -133,7 +133,7 @@ export default function RequestCallbackPanel({
             name="email"
             value={form.email}
             onChange={onChange}
-            className="h-14 w-full rounded-[12px] border-subtle bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
+            className="h-14 w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
             placeholder="Email address"
           />
         </div>
@@ -146,7 +146,7 @@ export default function RequestCallbackPanel({
             name="city"
             value={form.city}
             onChange={onChange}
-            className="h-14 w-full rounded-[12px] border-subtle bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
+            className="h-14 w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
             placeholder="City name"
           />
           {errors.city && <p className="text-sm text-red-600 mt-2">{errors.city}</p>}
@@ -160,7 +160,7 @@ export default function RequestCallbackPanel({
             value={form.problem}
             onChange={onChange}
             rows={4}
-            className="min-h-[120px] w-full rounded-[12px] border-subtle bg-white px-5 py-4 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)] resize-none"
+            className="min-h-[120px] w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 py-4 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)] resize-none"
             placeholder="Tell us about your mold problem..."
           />
           {errors.problem && <p className="text-sm text-red-600 mt-2">{errors.problem}</p>}
