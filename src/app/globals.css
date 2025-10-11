@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 :root {
+  /* Sinclair Blue Brand Palette */
+  --sin-blue-900: #0E356F;   /* Navy (headings, footer bg) */
+  --sin-blue-700: #1C5FAF;   /* Primary (CTAs, links) */
+  --sin-blue-600: #2D78C4;   /* Hover/active for CTAs */
+  --sin-blue-400: #5EA4E0;   /* Accents, icons, chips */
+  --sin-blue-050: #F3F6FA;   /* Light background */
+  --sin-neutral-000: #FFFFFF;
+  --sin-neutral-700: #0F0F10; /* Body text */
+  --sin-neutral-500: #3A3A3C; /* Secondary text */
+  --sin-border: rgba(14, 53, 111, 0.10); /* Subtle blue-tinted border */
+
+  /* Legacy compatibility (for Tailwind theme) */
   --background: #ffffff;
   --foreground: #171717;
-  --bg:        #F5F0E8;  /* page background */
-  --bg-soft:   #EEE7DD;  /* section bands */
-  --surface:   #FFFFFF;  /* cards */
-  --panel:     #E7E2DA;  /* callback panel */
-  --panel-brd: #F3EEE8;  /* thin borders */
-  --ink:       #0F0F10;  /* main text */
-  --ink-soft:  rgba(15,15,16,0.72);
 }
 
 @theme inline {
@@ -27,11 +32,27 @@
 }
 
 body {
-  background: linear-gradient(180deg, var(--bg) 0%, #F0E9DF 100%);
-  color: var(--ink);
+  background-color: var(--sin-blue-050);
+  color: var(--sin-neutral-700);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
 }
 
-.surface { background-color: var(--surface); }
-.panel   { background-color: var(--panel); border: 1px solid var(--panel-brd); }
-.band    { background-color: var(--bg-soft); }
+/* Utility Classes */
+.bg-site { background-color: var(--sin-blue-050); }
+.bg-card { background-color: var(--sin-neutral-000); }
+.border-subtle { border-color: var(--sin-border); }
+.text-heading { color: var(--sin-blue-900); }
+.text-link { color: var(--sin-blue-700); }
+.btn-primary { 
+  background: var(--sin-blue-700); 
+  color: #fff;
+  transition: background 200ms ease-out;
+}
+.btn-primary:hover { background: var(--sin-blue-600); }
+.chip-blue { 
+  background: color-mix(in srgb, var(--sin-blue-700) 10%, white); 
+  color: var(--sin-blue-900); 
+}
+.grad-hero { 
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--sin-blue-700) 12%, white), var(--sin-blue-050)); 
+}

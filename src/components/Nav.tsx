@@ -83,17 +83,17 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50">
       {/* Main nav bar */}
-      <div className="w-full bg-[#F5F0E8] border-b border-[#F3EEE8]">
+      <div className="w-full bg-site border-b border-subtle">
         <div className="mx-auto max-w-[1440px] px-4 lg:px-6 h-16 lg:h-[72px] flex items-center justify-between">
           {/* Brand Left */}
           <Link 
             href="/" 
             className="flex items-baseline gap-1 group"
           >
-            <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-black">
+            <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-heading">
               Sinclair Restoration
             </span>
-            <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-black/60 uppercase ml-2">
+            <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-[var(--sin-neutral-500)] uppercase ml-2">
               Complete Mold Remediation
             </span>
           </Link>
@@ -106,7 +106,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('services')}
                 onKeyDown={(e) => handleKeyDown(e, 'services')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/services' ? 'text-black underline' : 'text-black/80 hover:text-black'
+                  pathname === '/services' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
                 }`}
                 aria-expanded={openDropdown === 'services'}
               >
@@ -117,20 +117,20 @@ export default function Nav() {
               </button>
               
               {openDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-2 bg-white rounded-2xl border border-black/10 shadow-sm p-3 min-w-[220px]">
-                  <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[220px]">
+                  <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Mold inspection & testing
                   </Link>
-                  <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Whole home mold remediation
                   </Link>
-                  <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Crawlspace mold remediation
                   </Link>
-                  <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     HVAC mold prevention
                   </Link>
-                  <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Water damage cleanup & restoration
                   </Link>
                 </div>
@@ -143,7 +143,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('about')}
                 onKeyDown={(e) => handleKeyDown(e, 'about')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/about' ? 'text-black underline' : 'text-black/80 hover:text-black'
+                  pathname === '/about' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
                 }`}
                 aria-expanded={openDropdown === 'about'}
               >
@@ -154,14 +154,14 @@ export default function Nav() {
               </button>
               
               {openDropdown === 'about' && (
-                <div className="absolute top-full left-0 mt-2 bg-white rounded-2xl border border-black/10 shadow-sm p-3 min-w-[160px]">
-                  <Link href="/team" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[160px]">
+                  <Link href="/team" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Our Team
                   </Link>
-                  <Link href="/process" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/process" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Our Process
                   </Link>
-                  <Link href="/certifications" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/certifications" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Certifications
                   </Link>
                 </div>
@@ -175,7 +175,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('learning')}
                 onKeyDown={(e) => handleKeyDown(e, 'learning')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/learning' ? 'text-black underline' : 'text-black/80 hover:text-black'
+                  pathname === '/learning' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
                 }`}
                 aria-expanded={openDropdown === 'learning'}
               >
@@ -186,14 +186,14 @@ export default function Nav() {
               </button>
               
               {openDropdown === 'learning' && (
-                <div className="absolute top-full left-0 mt-2 bg-white rounded-2xl border border-black/10 shadow-sm p-3 min-w-[160px]">
-                  <Link href="/blog" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[160px]">
+                  <Link href="/blog" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Blog
                   </Link>
-                  <Link href="/guides" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/guides" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     Guides
                   </Link>
-                  <Link href="/faq" className="block text-[14px] font-medium text-black/80 hover:text-black py-2">
+                  <Link href="/faq" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
                     FAQ
                   </Link>
                 </div>
@@ -203,7 +203,7 @@ export default function Nav() {
             <Link 
               href="/service-area" 
               className={`text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                pathname === '/service-area' ? 'text-black underline' : 'text-black/80 hover:text-black'
+                pathname === '/service-area' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
               }`}
             >
               Service Area
@@ -251,7 +251,7 @@ export default function Nav() {
       {isMobileMenuOpen && (
         <div 
           id="mobile-menu"
-          className="fixed inset-x-0 top-[70px] bottom-0 bg-white border-t border-[#F3EEE8] shadow-lg lg:hidden z-40"
+          className="fixed inset-x-0 top-[70px] bottom-0 bg-card border-t border-subtle shadow-lg lg:hidden z-40"
           style={{ 
             animation: 'slideDown 250ms ease-out',
             paddingBottom: 'env(safe-area-inset-bottom)'
@@ -278,7 +278,7 @@ export default function Nav() {
               <div>
                 <button
                   onClick={() => handleMobileAccordionToggle('services')}
-                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-black/80 hover:text-black transition-colors"
+                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
                   aria-expanded={openMobileAccordion === 'services'}
                   aria-controls="services-mobile-panel"
                 >
@@ -289,19 +289,19 @@ export default function Nav() {
                 </button>
                 {openMobileAccordion === 'services' && (
                   <div id="services-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Mold inspection & testing
                     </Link>
-                    <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Whole home mold remediation
                     </Link>
-                    <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Crawlspace mold remediation
                     </Link>
-                    <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       HVAC mold prevention
                     </Link>
-                    <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Water damage cleanup & restoration
                     </Link>
                   </div>
@@ -312,7 +312,7 @@ export default function Nav() {
               <div>
                 <button
                   onClick={() => handleMobileAccordionToggle('about')}
-                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-black/80 hover:text-black transition-colors"
+                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
                   aria-expanded={openMobileAccordion === 'about'}
                   aria-controls="about-mobile-panel"
                 >
@@ -323,13 +323,13 @@ export default function Nav() {
                 </button>
                 {openMobileAccordion === 'about' && (
                   <div id="about-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/team" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/team" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Our Team
                     </Link>
-                    <Link href="/process" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/process" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Our Process
                     </Link>
-                    <Link href="/certifications" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/certifications" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Certifications
                     </Link>
                   </div>
@@ -341,7 +341,7 @@ export default function Nav() {
               <div>
                 <button
                   onClick={() => handleMobileAccordionToggle('learning')}
-                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-black/80 hover:text-black transition-colors"
+                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
                   aria-expanded={openMobileAccordion === 'learning'}
                   aria-controls="learning-mobile-panel"
                 >
@@ -352,13 +352,13 @@ export default function Nav() {
                 </button>
                 {openMobileAccordion === 'learning' && (
                   <div id="learning-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/blog" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/blog" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Blog
                     </Link>
-                    <Link href="/guides" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/guides" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       Guides
                     </Link>
-                    <Link href="/faq" className="block text-[14px] font-medium text-black/70 hover:text-black py-2 transition-colors">
+                    <Link href="/faq" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
                       FAQ
                     </Link>
                   </div>
@@ -368,18 +368,18 @@ export default function Nav() {
               {/* Service Area */}
               <Link 
                 href="/service-area" 
-                className="block py-4 text-[16px] font-semibold text-black/80 hover:text-black transition-colors"
+                className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
               >
                 Service Area
               </Link>
 
               {/* Divider */}
-              <div className="border-t border-black/10 my-4"></div>
+              <div className="border-t border-subtle my-4"></div>
 
               {/* Secondary Book Inspection Link */}
               <Link 
                 href="/book-inspection" 
-                className="block py-4 text-[16px] font-semibold text-black/80 hover:text-black transition-colors"
+                className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
               >
                 Book inspection
               </Link>

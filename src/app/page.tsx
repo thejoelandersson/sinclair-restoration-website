@@ -19,7 +19,7 @@ export default function Home() {
                 <p className="text-sm tracking-[0.08em] text-[#3A3A3C] uppercase">
                   SERVING GREATER NEW ORLEANS AREA
                 </p>
-                <h1 className="text-[clamp(40px,6vw,72px)] font-bold tracking-[-0.02em] leading-[1.05] text-[#0F0F10]">
+                <h1 className="text-[clamp(40px,6vw,72px)] font-bold tracking-[-0.02em] leading-[1.05] text-heading">
                 Complete Mold Remediation That Lasts
               </h1>
                 <p className="max-w-[600px] text-[18px] text-[#3A3A3C] leading-snug">
@@ -33,7 +33,7 @@ export default function Home() {
 
             {/* Right Column - Image */}
             <div className="relative">
-              <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA]">
+              <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle">
                 <div className="aspect-[4/3] rounded-[16px] overflow-hidden relative">
                   <img 
                     src="/pics/image2.png" 
@@ -44,13 +44,13 @@ export default function Home() {
                   {/* Overlay Stat Box */}
                   <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-sm border border-white/20 w-[140px] sm:w-[160px] lg:w-[180px]">
                     <div className="text-left h-full flex flex-col justify-center">
-                      <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-semibold tracking-[-0.01em] text-[#0F0F10] leading-tight mb-1">
+                      <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-semibold tracking-[-0.01em] text-heading leading-tight mb-1">
                         Guaranteed<br />effective
                       </p>
-                      <p className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[#0F0F10] leading-none mb-1">
+                      <p className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-heading leading-none mb-1">
                         99.9%
                       </p>
-                      <p className="text-[10px] sm:text-[11px] lg:text-[12px] text-[#3A3A3C] leading-tight">
+                      <p className="text-[10px] sm:text-[11px] lg:text-[12px] text-[var(--sin-neutral-500)] leading-tight">
                         of mold destroyed<br />without harsh chemicals
                       </p>
                     </div>
@@ -69,7 +69,7 @@ export default function Home() {
             
             {/* Left Image */}
             <div className="relative">
-              <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA]">
+              <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle">
                 <div className="rounded-[16px] overflow-hidden relative">
                   <img 
                     src="/pics/hvac.png" 
@@ -82,24 +82,24 @@ export default function Home() {
 
             {/* Right Content */}
             <div className="space-y-6">
-              <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-[#0F0F10] leading-[1.1]">
+              <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-heading leading-[1.1]">
                 If you find mold anywhere, you have it everywhere
           </h2>
               
               <div className="space-y-6">
-                <p className="text-[17px] leading-[1.5] text-[#0F0F10]">
+                <p className="text-[17px] leading-[1.5] text-[var(--sin-neutral-700)]">
                   Mold doesn&apos;t stay put. Instead it circulates throughout your home until it finds moisture to colonize.
                 </p>
                 
-                <hr className="border-[#E7E2DA]" />
+                <hr className="border-subtle" />
                 
-                <p className="text-[17px] leading-[1.5] text-[#0F0F10]">
+                <p className="text-[17px] leading-[1.5] text-[var(--sin-neutral-700)]">
                   Traditional mold remediation tends to focus on visible mold—failing to address the larger infestation.
                 </p>
                 
-                <hr className="border-[#E7E2DA]" />
+                <hr className="border-subtle" />
                 
-                <p className="text-[17px] leading-[1.5] text-[#0F0F10]">
+                <p className="text-[17px] leading-[1.5] text-[var(--sin-neutral-700)]">
                   Only Sinclair&apos;s technology—recommended by functional medicine doctors everywhere, and exclusive to Sinclair in Greater New Orleans—has been shown to fully destroy 99.9% of mold on all surfaces.
                 </p>
               </div>
@@ -114,13 +114,13 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-          <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-[#0F0F10] text-center mb-16">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-heading text-center mb-16">
             Life-changing stories
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Testimonial 1 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -160,7 +160,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -180,7 +180,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 4 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 5 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -220,7 +220,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 6 */}
-            <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] relative">
+            <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle relative">
               <div className="flex justify-between items-start mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -243,21 +243,18 @@ export default function Home() {
       </section>
 
       {/* New Section */}
-      <section 
-        className="py-12 lg:py-16"
-        style={{ backgroundColor: "#F5F0E8" }}
-      >
+      <section className="py-12 lg:py-16 bg-site">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-12 items-center">
             
             {/* Left Content */}
             <div className="space-y-4">
-              <p className="text-xs tracking-[0.08em] text-black/70 uppercase">SCHEDULE YOUR INSPECTION TODAY</p>
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold tracking-[-0.01em] leading-[1.1] text-black">
+              <p className="text-xs tracking-[0.08em] text-[var(--sin-neutral-500)] uppercase">SCHEDULE YOUR INSPECTION TODAY</p>
+              <h2 className="text-[clamp(24px,3vw,32px)] font-bold tracking-[-0.01em] leading-[1.1] text-heading">
                 Start your complete<br />
                 mold remediation
               </h2>
-              <p className="text-[15px] leading-[1.4] text-[#4A4A4A]">
+              <p className="text-[15px] leading-[1.4] text-[var(--sin-neutral-500)]">
                 From inspection to prevention, Sinclair guarantees lasting results.
               </p>
               <div className="pt-2">
@@ -269,7 +266,7 @@ export default function Home() {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] max-w-[400px] mx-auto lg:mx-0">
+              <div className="bg-card rounded-[20px] p-6 shadow-sm border-subtle max-w-[400px] mx-auto lg:mx-0">
                 <div className="rounded-[16px] overflow-hidden relative">
                   <img 
                     src="/pics/justinTruck.png" 
