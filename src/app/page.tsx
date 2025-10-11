@@ -44,14 +44,14 @@ export default function Home() {
                   {/* Overlay Stat Box */}
                   <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-sm border border-white/20 w-[140px] sm:w-[160px] lg:w-[180px]">
                     <div className="text-left h-full flex flex-col justify-center">
-                      <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-semibold tracking-[-0.01em] text-heading leading-tight mb-1">
-                        Guaranteed<br />effective
+                      <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-semibold tracking-[-0.01em] text-[var(--sin-blue-900)] leading-tight mb-1">
+                        Professionally<br />verified results
                       </p>
-                      <p className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-heading leading-none mb-1">
+                      <p className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[var(--sin-blue-700)] leading-none mb-1">
                         99.9%
                       </p>
-                      <p className="text-[10px] sm:text-[11px] lg:text-[12px] text-[var(--sin-neutral-500)] leading-tight">
-                        of mold destroyed<br />without harsh chemicals
+                      <p className="text-[10px] sm:text-[11px] lg:text-[12px] text-neutral-600 leading-tight">
+                        of mold eliminated through<br />certified remediation methods
                       </p>
                     </div>
                   </div>
