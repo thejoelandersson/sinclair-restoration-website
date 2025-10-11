@@ -83,17 +83,17 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50">
       {/* Main nav bar */}
-      <div className="w-full bg-site border-b border-subtle">
+      <div className="w-full bg-[var(--sin-blue-900)] border-b border-white/10">
         <div className="mx-auto max-w-[1440px] px-4 lg:px-6 h-16 lg:h-[72px] flex items-center justify-between">
           {/* Brand Left */}
           <Link 
             href="/" 
             className="flex items-baseline gap-1 group"
           >
-            <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-heading">
+            <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-white">
               Sinclair Restoration
             </span>
-            <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-[var(--sin-neutral-500)] uppercase ml-2">
+            <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-white/70 uppercase ml-2">
               Complete Mold Remediation
             </span>
           </Link>
@@ -106,7 +106,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('services')}
                 onKeyDown={(e) => handleKeyDown(e, 'services')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/services' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
+                  pathname === '/services' ? 'text-white underline' : 'text-white/90 hover:text-white'
                 }`}
                 aria-expanded={openDropdown === 'services'}
               >
@@ -143,7 +143,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('about')}
                 onKeyDown={(e) => handleKeyDown(e, 'about')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/about' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
+                  pathname === '/about' ? 'text-white underline' : 'text-white/90 hover:text-white'
                 }`}
                 aria-expanded={openDropdown === 'about'}
               >
@@ -175,7 +175,7 @@ export default function Nav() {
                 onClick={() => handleDropdownToggle('learning')}
                 onKeyDown={(e) => handleKeyDown(e, 'learning')}
                 className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/learning' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
+                  pathname === '/learning' ? 'text-white underline' : 'text-white/90 hover:text-white'
                 }`}
                 aria-expanded={openDropdown === 'learning'}
               >
@@ -203,7 +203,7 @@ export default function Nav() {
             <Link 
               href="/service-area" 
               className={`text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                pathname === '/service-area' ? 'text-link underline' : 'text-[var(--sin-neutral-700)] hover:text-link'
+                pathname === '/service-area' ? 'text-white underline' : 'text-white/90 hover:text-white'
               }`}
             >
               Service Area
@@ -219,19 +219,19 @@ export default function Nav() {
             {/* Hamburger Button */}
             <button
               onClick={handleMobileMenuToggle}
-              className="relative w-10 h-10 rounded-lg flex items-center justify-center transition-colors hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/20"
+              className="relative w-10 h-10 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
             >
               <div className="w-5 h-4 flex flex-col justify-between">
-                <span className={`block h-0.5 bg-black transition-all duration-200 ease-out ${
+                <span className={`block h-0.5 bg-white transition-all duration-200 ease-out ${
                   isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
                 }`}></span>
-                <span className={`block h-0.5 bg-black transition-all duration-200 ease-out ${
+                <span className={`block h-0.5 bg-white transition-all duration-200 ease-out ${
                   isMobileMenuOpen ? 'opacity-0' : ''
                 }`}></span>
-                <span className={`block h-0.5 bg-black transition-all duration-200 ease-out ${
+                <span className={`block h-0.5 bg-white transition-all duration-200 ease-out ${
                   isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
                 }`}></span>
               </div>
