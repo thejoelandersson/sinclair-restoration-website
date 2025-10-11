@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import CTA from '@/components/CTA';
 
 // Constants
-const PHONE_MAIN = "(000) 000-0000";
+const PHONE_MAIN = "(504) 490-1624";
 const MAIL_TO = "hello@sinclairrestoration.com";
 
 export default function BookInspection() {
