@@ -276,7 +276,7 @@ export default function Home() {
               <div className="bg-white rounded-[20px] p-6 shadow-sm border border-[#E7E2DA] max-w-[400px] mx-auto lg:mx-0">
                 <div className="rounded-[16px] overflow-hidden relative">
                   <img 
-                    src="/pics/image2.png" 
+                    src="/pics/justinTruck.png" 
                     alt="Sinclair Restoration service van" 
                     className="w-full h-auto"
                   />
