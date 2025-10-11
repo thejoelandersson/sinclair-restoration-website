@@ -1,6 +1,5 @@
 'use client';
 
-import Marquee from '@/components/Marquee';
 import CTA from '@/components/CTA';
 
 export default function Home() {
@@ -62,9 +61,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* How it Works Marquee */}
-      <Marquee items={["Inspect","Contain","Remediate","Prevent"]} speed="normal" direction="left" />
 
       {/* Mold Everywhere Section */}
       <section className="py-16 lg:py-24">
