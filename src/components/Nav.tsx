@@ -88,14 +88,21 @@ export default function Nav() {
           {/* Brand Left */}
           <Link 
             href="/" 
-            className="flex items-baseline gap-1 group"
+            className="flex items-center gap-3 group"
           >
-            <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-white">
-              Sinclair Restoration
-            </span>
-            <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-white/70 uppercase ml-2">
-              Complete Mold Remediation
-            </span>
+            <img 
+              src="/pics/justinlogo.png" 
+              alt="Sinclair Restoration Logo" 
+              className="h-10 lg:h-12 w-auto"
+            />
+            <div className="flex items-baseline gap-1">
+              <span className="text-[18px] lg:text-[20px] font-semibold tracking-[-0.01em] text-white">
+                Sinclair Restoration
+              </span>
+              <span className="hidden lg:block text-[10px] lg:text-[11px] font-medium tracking-[0.05em] text-white/70 uppercase ml-2">
+                Complete Mold Remediation
+              </span>
+            </div>
           </Link>
 
           {/* Nav Links Center */}
