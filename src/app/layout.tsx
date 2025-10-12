@@ -6,10 +6,6 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Sinclair Restoration — Mold Remediation & Testing",
   description: "Complete mold remediation that lasts. Inspection, testing, removal, and moisture control—done right the first time.",
-  icons: { 
-    icon: "/favicon.png",
-    apple: "/favicon.png",
-  },
   openGraph: {
     title: "Sinclair Restoration",
     description: "Complete mold remediation that lasts.",
