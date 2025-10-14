@@ -138,36 +138,15 @@ export default function Nav() {
               )}
             </div>
 
-            {/* About Dropdown */}
-            <div className="relative" data-dropdown>
-              <button
-                onClick={() => handleDropdownToggle('about')}
-                onKeyDown={(e) => handleKeyDown(e, 'about')}
-                className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/about' ? 'text-white underline' : 'text-white/90 hover:text-white'
-                }`}
-                aria-expanded={openDropdown === 'about'}
-              >
-                About
-                <span className={`text-[12px] transition-transform duration-200 ${
-                  openDropdown === 'about' ? 'rotate-180' : ''
-                }`}>▾</span>
-              </button>
-              
-              {openDropdown === 'about' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[160px]">
-                  <Link href="/team" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Our Team
-                  </Link>
-                  <Link href="/process" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Our Process
-                  </Link>
-                  <Link href="/certifications" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Certifications
-                  </Link>
-                </div>
-              )}
-            </div>
+            {/* About Link */}
+            <Link 
+              href="/about" 
+              className={`text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
+                pathname === '/about' ? 'text-white underline' : 'text-white/90 hover:text-white'
+              }`}
+            >
+              About
+            </Link>
 
 
             {/* Learning Dropdown */}
@@ -313,33 +292,13 @@ export default function Nav() {
                 )}
               </div>
 
-              {/* About Accordion */}
-              <div>
-                <button
-                  onClick={() => handleMobileAccordionToggle('about')}
-                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
-                  aria-expanded={openMobileAccordion === 'about'}
-                  aria-controls="about-mobile-panel"
-                >
-                  About
-                  <span className={`text-[12px] transition-transform duration-200 ${
-                    openMobileAccordion === 'about' ? 'rotate-180' : ''
-                  }`}>▾</span>
-                </button>
-                {openMobileAccordion === 'about' && (
-                  <div id="about-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/team" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Our Team
-                    </Link>
-                    <Link href="/process" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Our Process
-                    </Link>
-                    <Link href="/certifications" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Certifications
-                    </Link>
-                  </div>
-                )}
-              </div>
+              {/* About Link */}
+              <Link 
+                href="/about" 
+                className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
+              >
+                About
+              </Link>
 
 
               {/* Learning Accordion */}
