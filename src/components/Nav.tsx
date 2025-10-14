@@ -124,21 +124,15 @@ export default function Nav() {
               </button>
               
               {openDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[220px]">
-                  <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Mold inspection & testing
-                  </Link>
-                  <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Whole home mold remediation
-                  </Link>
-                  <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Crawlspace mold remediation
-                  </Link>
-                  <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    HVAC mold prevention
+                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[240px]">
+                  <Link href="/services/mold-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
+                    Mold Remediation
                   </Link>
                   <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Water damage cleanup & restoration
+                    Water Damage Restoration
+                  </Link>
+                  <Link href="/services/crawlspace-moisture-control" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
+                    Crawlspace & Moisture Control
                   </Link>
                 </div>
               )}
@@ -306,20 +300,14 @@ export default function Nav() {
                 </button>
                 {openMobileAccordion === 'services' && (
                   <div id="services-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/services/mold-inspection" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Mold inspection & testing
-                    </Link>
-                    <Link href="/services/whole-home-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Whole home mold remediation
-                    </Link>
-                    <Link href="/services/crawlspace-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Crawlspace mold remediation
-                    </Link>
-                    <Link href="/services/hvac-mold-prevention" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      HVAC mold prevention
+                    <Link href="/services/mold-remediation" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
+                      Mold Remediation
                     </Link>
                     <Link href="/services/water-damage-restoration" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Water damage cleanup & restoration
+                      Water Damage Restoration
+                    </Link>
+                    <Link href="/services/crawlspace-moisture-control" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
+                      Crawlspace & Moisture Control
                     </Link>
                   </div>
                 )}

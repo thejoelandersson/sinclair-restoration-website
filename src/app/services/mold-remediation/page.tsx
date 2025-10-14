@@ -2,17 +2,17 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Water Damage Restoration — Sinclair Restoration, New Orleans',
-  description: 'Fast water extraction, structural dry-out, moisture readings, and targeted demo. Emergencies prioritized same day.',
+  title: 'Mold Remediation — Sinclair Restoration, New Orleans',
+  description: 'Source-first mold remediation with proper containment, HEPA cleaning, and independent clearance when needed.',
 };
 
-export default function WaterDamageRestorationPage() {
+export default function MoldRemediationPage() {
   return (
     <main className="min-h-screen bg-site py-16 lg:py-24">
       <div className="mx-auto max-w-[900px] px-6 lg:px-8">
         {/* Header */}
         <h1 className="text-[clamp(36px,5vw,56px)] font-bold tracking-[-0.02em] leading-[1.1] text-heading mb-8">
-          Water Damage Restoration
+          Mold Remediation
         </h1>
 
         {/* Content */}
@@ -20,12 +20,12 @@ export default function WaterDamageRestorationPage() {
           <div className="space-y-6">
             <div>
               <p className="text-[17px] text-[var(--sin-neutral-700)] leading-relaxed">
-                <strong className="text-heading">What you get:</strong> Fast extraction • Structural dry-out • Moisture readings/logs • Targeted demo if needed • Clear estimate before work
+                <strong className="text-heading">What you get:</strong> Moisture diagnostics • Containment/negative air (as needed) • Removal where required • HEPA & surface treatment • Independent clearance available
               </p>
             </div>
             <div>
               <p className="text-[17px] text-[var(--sin-neutral-700)] leading-relaxed">
-                <strong className="text-heading">Priority:</strong> Emergencies prioritized same day
+                <strong className="text-heading">Typical timeline:</strong> Small 1–2 days • Larger 3–5 days
               </p>
             </div>
           </div>
@@ -56,3 +56,4 @@ export default function WaterDamageRestorationPage() {
     </main>
   );
 }
+

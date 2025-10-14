@@ -72,8 +72,16 @@ export default function Footer() {
             Home
           </Link>
           <span className="hidden sm:inline">•</span>
-          <Link href="/services" className="hover:text-white transition-colors">
-            Services
+          <Link href="/services/mold-remediation" className="hover:text-white transition-colors">
+            Mold Remediation
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/services/water-damage-restoration" className="hover:text-white transition-colors">
+            Water Damage
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/services/crawlspace-moisture-control" className="hover:text-white transition-colors">
+            Crawlspace
           </Link>
           <span className="hidden sm:inline">•</span>
           <Link href="/service-area" className="hover:text-white transition-colors">
