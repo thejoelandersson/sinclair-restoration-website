@@ -84,7 +84,7 @@ export default function Nav() {
     <nav className="sticky top-0 z-50">
       {/* Main nav bar */}
       <div className="w-full bg-[var(--sin-blue-900)] border-b border-white/10">
-        <div className="mx-auto max-w-[1440px] px-4 lg:px-6 h-16 lg:h-[72px] flex items-center justify-between">
+        <div className="mx-auto max-w-[1440px] px-4 lg:px-6 h-16 lg:h-[72px] flex items-center">
           {/* Brand Left */}
           <Link 
             href="/" 
@@ -105,8 +105,8 @@ export default function Nav() {
             </div>
           </Link>
 
-          {/* Nav Links Center */}
-          <div className="hidden lg:flex items-center gap-8 ml-8">
+          {/* Navigation and CTAs - Shifted Right */}
+          <div className="hidden lg:flex items-center gap-8 ml-auto">
             {/* Services Dropdown */}
             <div className="relative" data-dropdown>
               <button
@@ -167,6 +167,20 @@ export default function Nav() {
             >
               Service Area
             </Link>
+
+            {/* Desktop CTAs */}
+            <a 
+              href="tel:+15044901624"
+              className="text-[15px] font-semibold text-white/90 hover:text-white transition-colors whitespace-nowrap"
+              aria-label="Call 24/7 at (504) 490-1624"
+              data-cta="header-call-24-7"
+            >
+              Call 24/7 • (504) 490-1624
+            </a>
+            
+            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
+              Book Inspection
+            </CTA>
           </div>
 
           {/* Mobile CTAs + Hamburger */}
@@ -197,22 +211,6 @@ export default function Nav() {
             </button>
           </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-4">
-            {/* Call 24/7 Text Link (Desktop) */}
-            <a 
-              href="tel:+15044901624"
-              className="text-[15px] font-semibold text-white/90 hover:text-white transition-colors whitespace-nowrap"
-              aria-label="Call 24/7 at (504) 490-1624"
-              data-cta="header-call-24-7"
-            >
-              Call 24/7 • (504) 490-1624
-            </a>
-            
-            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
-              Book Inspection
-            </CTA>
-          </div>
         </div>
       </div>
 
