@@ -9,26 +9,21 @@ export const metadata: Metadata = {
 
 export default function CrawlspaceMoistureControlPage() {
   return (
-    <main className="min-h-screen bg-site py-16 lg:py-24">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start">
-          {/* Left Column - Content */}
-          <div className="max-w-[800px]">
-            <h1 className="text-[clamp(36px,5vw,56px)] font-bold tracking-[-0.02em] leading-[1.1] text-heading mb-8">
-              Crawlspace & Moisture Control
-            </h1>
-            
-            <div>
-              <p className="text-[17px] text-[var(--sin-neutral-700)] leading-relaxed">
-                <strong className="text-heading">What you get:</strong> Moisture assessment • Vapor barrier • Targeted remediation as indicated (no HVAC services)
-              </p>
+    <main className="min-h-screen bg-site">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-8 pt-10 pb-24 lg:pt-16 lg:pb-32">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 xl:gap-16 lg:gap-y-16">
+          {/* LEFT COPY */}
+          <section className="max-w-[600px]">
+            <h1 className="text-[clamp(38px,4vw,44px)] font-bold tracking-[-0.01em] leading-[1.1] text-heading">Crawlspace & Moisture Control</h1>
+            <div className="mt-4 space-y-6 text-[17px] leading-[1.5] text-[var(--sin-neutral-500)]">
+              <p><strong className="text-heading">What you get:</strong> Moisture assessment • Vapor barrier • Targeted remediation as indicated (no HVAC services)</p>
             </div>
-          </div>
+          </section>
 
-          {/* Right Column - Call/Text Panel */}
-          <div className="lg:sticky lg:top-24">
+          {/* RIGHT PANEL */}
+          <aside className="lg:sticky lg:top-8">
             <RequestCallbackPanel />
-          </div>
+          </aside>
         </div>
 
         {/* Bottom CTAs */}
