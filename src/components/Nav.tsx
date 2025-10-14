@@ -229,8 +229,8 @@ export default function Nav() {
               Call 24/7 • (504) 490-1624
             </a>
             
-            <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
-              Book Same-Day Inspection
+            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
+              Book Inspection
             </CTA>
             
             {/* Hamburger Button */}
@@ -267,8 +267,8 @@ export default function Nav() {
               Call 24/7 • (504) 490-1624
             </a>
             
-            <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
-              Book Same-Day Inspection
+            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
+              Book Inspection
             </CTA>
           </div>
         </div>
@@ -408,7 +408,7 @@ export default function Nav() {
                 href="/book-inspection" 
                 className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
               >
-                Book Same-Day Inspection
+                Book Inspection
               </Link>
             </div>
           </div>

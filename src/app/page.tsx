@@ -25,8 +25,8 @@ export default function Home() {
                 <p className="max-w-[600px] text-[18px] text-[#3A3A3C] leading-snug">
                 Professional inspection, testing, removal, and moisture control—done right the first time.
               </p>
-                <CTA href="/book-inspection" ariaLabel="Book an inspection">
-                Book inspection
+                <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
+                Book Same-Day Inspection
                 </CTA>
               </div>
             </div>
