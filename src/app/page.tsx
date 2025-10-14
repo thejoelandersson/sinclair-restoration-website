@@ -1,6 +1,7 @@
 'use client';
 
 import CTA from '@/components/CTA';
+import BadgeRow from '@/components/BadgeRow';
 
 export default function Home() {
 
@@ -22,12 +23,30 @@ export default function Home() {
                 <h1 className="text-[clamp(40px,6vw,72px)] font-bold tracking-[-0.02em] leading-[1.05] text-heading">
                 Complete Mold Remediation That Lasts
               </h1>
-                <p className="max-w-[600px] text-[18px] text-[#3A3A3C] leading-snug">
-                Professional inspection, testing, removal, and moisture control—done right the first time.
-              </p>
-                <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
-                Book Same-Day Inspection
-                </CTA>
+                
+                {/* Brand Promise */}
+                <p className="text-lg font-medium text-[var(--sin-neutral-700)]">
+                  Moisture-first. Ethical. Done right.
+                </p>
+                
+                <div className="space-y-4">
+                  <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
+                    Book Same-Day Inspection
+                  </CTA>
+                  
+                  {/* Badge Row */}
+                  <BadgeRow />
+                  
+                  {/* Same-Day Info */}
+                  <p className="text-sm font-medium text-[var(--sin-neutral-500)]">
+                    <span className="inline-flex items-center gap-2">
+                      <svg className="w-4 h-4 text-[var(--sin-blue-700)]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Same-day: Yes (core zones)
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
 
