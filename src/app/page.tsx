@@ -21,7 +21,7 @@ export default function Home() {
                   SERVING GREATER NEW ORLEANS AREA
                 </p>
                 <h1 className="text-[clamp(40px,6vw,72px)] font-bold tracking-[-0.02em] leading-[1.05] text-heading">
-                Complete Mold Remediation That Lasts
+                Mold Remediation & Water Damage Restoration
               </h1>
                 
                 {/* Brand Promise */}
