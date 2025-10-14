@@ -5,7 +5,7 @@ import CTA from './CTA';
 
 // Constants
 const PHONE_MAIN = "(504) 490-1624";
-const MAIL_TO = "hello@sinclairrestoration.com";
+const MAIL_TO = "justin@sinclairrestoration.com";
 
 interface RequestCallbackPanelProps {
   title?: string;
@@ -13,15 +13,15 @@ interface RequestCallbackPanelProps {
 }
 
 export default function RequestCallbackPanel({ 
-  title = "Call or text our team and we can help asap.",
-  subtitle = "This goes to a cell phone. We pick up or respond fast"
+  title = "Contact",
+  subtitle = "Call 24/7: (504) 490-1624 • Email: justin@sinclairrestoration.com"
 }: RequestCallbackPanelProps) {
   const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
-    city: "",
-    problem: ""
+    zipAddress: "",
+    message: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
@@ -36,8 +36,7 @@ export default function RequestCallbackPanel({
     
     if (!form.name) newErrors.name = "This field is required";
     if (!form.phone) newErrors.phone = "This field is required";
-    if (!form.city) newErrors.city = "This field is required";
-    if (!form.problem) newErrors.problem = "This field is required";
+    if (!form.zipAddress) newErrors.zipAddress = "This field is required";
     
     setErrors(newErrors);
     
@@ -46,11 +45,11 @@ export default function RequestCallbackPanel({
         `Name: ${form.name}`,
         `Phone: ${form.phone}`,
         `Email: ${form.email || "—"}`,
-        `City: ${form.city}`,
-        `Problem: ${form.problem}`
+        `ZIP/Address: ${form.zipAddress}`,
+        `Message: ${form.message || "—"}`
       ].join("\n");
       
-      const mailto = `mailto:${MAIL_TO}?subject=${encodeURIComponent("New callback request — Sinclair Restoration")}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:${MAIL_TO}?subject=${encodeURIComponent("New contact request — Sinclair Restoration")}&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
       setSent(true);
     }
@@ -65,7 +64,7 @@ export default function RequestCallbackPanel({
         }}
       >
         <div className="text-center">
-          <p className="text-lg text-[var(--sin-neutral-700)]">Thanks — we&apos;ll text or call soon.</p>
+          <p className="text-lg text-[var(--sin-neutral-700)]">Thanks—We&apos;ll call you within 1 hour.</p>
         </div>
       </div>
     );
@@ -79,27 +78,29 @@ export default function RequestCallbackPanel({
       }}
     >
       <div className="text-center">
-        <p className="text-[clamp(28px,3vw,32px)] leading-[1.2] tracking-[-0.01em] font-bold text-heading mb-6">
+        <h1 className="text-[clamp(28px,3vw,32px)] leading-[1.2] tracking-[-0.01em] font-bold text-heading mb-4">
           {title}
-        </p>
+        </h1>
 
-        <a href={`tel:${PHONE_MAIN.replace(/\D/g,"")}`}
-           aria-label={`Call or text us at ${PHONE_MAIN}`}
-           className="inline-block text-heading font-semibold tracking-[-0.01em] leading-[0.98] whitespace-nowrap my-6"
-           style={{ fontSize: "clamp(30px, 6.5vw, 64px)" }}>
-          <span className="inline-block border-b border-current pb-1">{PHONE_MAIN}</span>
-        </a>
-
-        <p className="text-[15px] text-[var(--sin-neutral-500)] mb-8">{subtitle}</p>
+        <div className="text-[15px] text-[var(--sin-neutral-500)] mb-8 space-y-1">
+          <p>
+            <a href="tel:+15044901624" className="text-link hover:underline">
+              Call 24/7: (504) 490-1624
+            </a>
+          </p>
+          <p>
+            <a href="mailto:justin@sinclairrestoration.com" className="text-link hover:underline">
+              Email: justin@sinclairrestoration.com
+            </a>
+          </p>
+        </div>
       </div>
 
       <hr className="border-subtle mb-6" />
 
-      <h2 className="text-[18px] font-medium tracking-[-0.01em] text-heading text-center mb-6">Request a call back</h2>
-
       <form className="space-y-6" onSubmit={onSubmit}>
         <div>
-          <label htmlFor="name" className="block text-[16px] font-medium text-heading mb-3">Name</label>
+          <label htmlFor="name" className="block text-[16px] font-medium text-heading mb-3">Name*</label>
           <input
             type="text"
             id="name"
@@ -113,7 +114,7 @@ export default function RequestCallbackPanel({
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-[16px] font-medium text-heading mb-3">Phone</label>
+          <label htmlFor="phone" className="block text-[16px] font-medium text-heading mb-3">Phone*</label>
           <input
             type="tel"
             id="phone"
@@ -140,31 +141,30 @@ export default function RequestCallbackPanel({
         </div>
 
         <div>
-          <label htmlFor="city" className="block text-[16px] font-medium text-heading mb-3">City</label>
+          <label htmlFor="zipAddress" className="block text-[16px] font-medium text-heading mb-3">ZIP/Address*</label>
           <input
             type="text"
-            id="city"
-            name="city"
-            value={form.city}
+            id="zipAddress"
+            name="zipAddress"
+            value={form.zipAddress}
             onChange={onChange}
             className="h-14 w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)]"
-            placeholder="City name"
+            placeholder="ZIP code or full address"
           />
-          {errors.city && <p className="text-sm text-red-600 mt-2">{errors.city}</p>}
+          {errors.zipAddress && <p className="text-sm text-red-600 mt-2">{errors.zipAddress}</p>}
         </div>
 
         <div>
-          <label htmlFor="problem" className="block text-[16px] font-medium text-heading mb-3">What&apos;s your mold problem?</label>
+          <label htmlFor="message" className="block text-[16px] font-medium text-heading mb-3">Message</label>
           <textarea
-            id="problem"
-            name="problem"
-            value={form.problem}
+            id="message"
+            name="message"
+            value={form.message}
             onChange={onChange}
             rows={4}
             className="min-h-[120px] w-full rounded-[12px] border border-[var(--sin-border)] bg-white px-5 py-4 text-[16px] placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[var(--sin-blue-600)] resize-none"
-            placeholder="Tell us about your mold problem..."
+            placeholder="Tell us about your needs..."
           />
-          {errors.problem && <p className="text-sm text-red-600 mt-2">{errors.problem}</p>}
         </div>
 
         <div className="text-center mt-8">
@@ -173,7 +173,7 @@ export default function RequestCallbackPanel({
             className="btn-primary group relative inline-flex items-center gap-3 rounded-full px-6 py-3 h-12 font-medium transition-all duration-250 ease-out hover:-translate-y-0.5 hover:shadow-md focus-visible:-translate-y-0.5 focus-visible:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--sin-blue-600)] active:translate-y-0.5 active:shadow-sm"
           >
             <span className="transition-colors duration-200">
-              Book inspection
+              Submit
             </span>
             
             <div className="relative">
@@ -186,6 +186,8 @@ export default function RequestCallbackPanel({
               </span>
             </div>
           </button>
+          
+          <p className="text-sm text-[var(--sin-neutral-500)] mt-4">We&apos;ll call you within 1 hour.</p>
         </div>
       </form>
     </div>
