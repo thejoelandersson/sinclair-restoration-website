@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import RequestCallbackPanel from '../_components/RequestCallbackPanel';
 
 export const metadata: Metadata = {
   title: 'Crawlspace & Moisture Control — Sinclair Restoration, New Orleans',
@@ -9,23 +10,29 @@ export const metadata: Metadata = {
 export default function CrawlspaceMoistureControlPage() {
   return (
     <main className="min-h-screen bg-site py-16 lg:py-24">
-      <div className="mx-auto max-w-[900px] px-6 lg:px-8">
-        {/* Header */}
-        <h1 className="text-[clamp(36px,5vw,56px)] font-bold tracking-[-0.02em] leading-[1.1] text-heading mb-8">
-          Crawlspace & Moisture Control
-        </h1>
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start">
+          {/* Left Column - Content */}
+          <div className="max-w-[800px]">
+            <h1 className="text-[clamp(36px,5vw,56px)] font-bold tracking-[-0.02em] leading-[1.1] text-heading mb-8">
+              Crawlspace & Moisture Control
+            </h1>
+            
+            <div>
+              <p className="text-[17px] text-[var(--sin-neutral-700)] leading-relaxed">
+                <strong className="text-heading">What you get:</strong> Moisture assessment • Vapor barrier • Targeted remediation as indicated (no HVAC services)
+              </p>
+            </div>
+          </div>
 
-        {/* Content */}
-        <div className="bg-card border border-[var(--sin-border)] rounded-2xl p-6 lg:p-8 mb-12">
-          <div>
-            <p className="text-[17px] text-[var(--sin-neutral-700)] leading-relaxed">
-              <strong className="text-heading">What you get:</strong> Moisture assessment • Vapor barrier • Targeted remediation as indicated (no HVAC services)
-            </p>
+          {/* Right Column - Call/Text Panel */}
+          <div className="lg:sticky lg:top-24">
+            <RequestCallbackPanel />
           </div>
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Bottom CTAs */}
+        <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
             href="tel:+15044901624"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--sin-blue-700)] text-white font-medium hover:bg-[var(--sin-blue-600)] transition-colors"
@@ -33,7 +40,7 @@ export default function CrawlspaceMoistureControlPage() {
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            Call 24/7
+            Call 24/7 • (504) 490-1624
           </a>
           <Link
             href="/book-inspection"
