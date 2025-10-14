@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import RequestCallbackPanel from '../_components/RequestCallbackPanel';
+import RequestCallbackPanel from '@/components/RequestCallbackPanel';
 
 export const metadata: Metadata = {
   title: 'Crawlspace & Moisture Control — Sinclair Restoration, New Orleans',
