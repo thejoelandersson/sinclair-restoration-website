@@ -1,44 +1,49 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import RequestCallbackPanel from '@/components/RequestCallbackPanel';
 
 export const metadata: Metadata = {
-  title: 'About Sinclair Restoration — New Orleans',
-  description: 'Low friction, same-day help—done the right way. Licensed & insured mold remediation with straight talk and clear estimates.',
+  title: 'About Sinclair Restoration — New Orleans Mold & Water Damage Experts',
+  description: 'Learn about Sinclair Restoration\'s moisture-first, ethical, and effective 5-step approach to mold remediation and water damage restoration in New Orleans.',
 };
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-site">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-8 pt-10 pb-24 lg:pt-16 lg:pb-32">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 xl:gap-16 lg:gap-y-16">
-          {/* LEFT COPY */}
-          <section className="max-w-[600px]">
-            <h1 className="text-[clamp(38px,4vw,44px)] font-bold tracking-[-0.01em] leading-[1.1] text-heading">About Sinclair Restoration</h1>
-            
-            <p className="mt-4 text-xl text-[var(--sin-neutral-500)] mb-6">
-              Low friction, same-day help—done the right way.
-            </p>
-            
-            <div className="mt-4 space-y-6 text-[17px] leading-[1.5] text-[var(--sin-neutral-500)]">
-              <p>
-                Louisiana&apos;s humidity and storms make mold a real issue. We keep it simple: fix the moisture source, contain the area, remove what&apos;s necessary, clean to standard, and—when needed—verify with an independent third party.
-              </p>
-              
-              <p>
-                <strong className="text-heading">Our 5-step approach:</strong> Inspect • Contain • Remove/HEPA • Treat surfaces • Independent clearance
-              </p>
-              
-              <p>
-                Licensed & insured. Straight talk, clear estimates, no fluff.
-              </p>
-            </div>
-          </section>
+    <main className="min-h-screen bg-site py-16 lg:py-24">
+      <div className="mx-auto max-w-[800px] px-6 lg:px-8">
+        <h1 className="text-[clamp(40px,6vw,72px)] font-bold tracking-[-0.02em] leading-[1.05] text-heading text-center mb-4">
+          About Sinclair Restoration
+        </h1>
+        <p className="text-lg text-[var(--sin-neutral-500)] text-center mb-12">
+          Low friction, same-day help—done the right way.
+        </p>
 
-          {/* RIGHT PANEL */}
-          <aside className="lg:sticky lg:top-8">
-            <RequestCallbackPanel />
-          </aside>
+        <div className="prose prose-lg max-w-none text-[var(--sin-neutral-700)] leading-relaxed">
+          <p className="mb-6">
+            At <strong>Sinclair Restoration</strong>, we know that Louisiana&apos;s humidity, rainfall, and older housing stock make moisture control a constant challenge. Mold isn&apos;t just a surface issue—it&apos;s often a sign of deeper moisture imbalance. That&apos;s why we start every project with diagnostics, not demolition.
+          </p>
+
+          <p className="mb-6">
+            Our approach is built on three principles: <strong>moisture-first</strong>, <strong>ethical</strong>, and <strong>done right</strong>. We take the time to locate the source of the problem, follow proper containment procedures, and restore your property according to industry standards. Every step is documented for clarity and transparency.
+          </p>
+
+          <p className="mb-4">
+            <strong>Our 5-step process:</strong>
+          </p>
+          <p className="mb-6">
+            Inspect → Contain → Remove/HEPA → Treat surfaces → Independent clearance testing (when applicable)
+          </p>
+
+          <p className="mb-6">
+            We&apos;re <strong>licensed and insured</strong>, and we work closely with independent third-party assessors for unbiased clearance results. No scare tactics, no hidden upsells—just clear communication, detailed reports, and workmanship that lasts.
+          </p>
+
+          <p className="mb-6">
+            We proudly serve <strong>Greater New Orleans and Baton Rouge</strong>, offering same-day service in core zones. Whether it&apos;s a small bathroom leak or full structural moisture damage, our goal is the same: restore your environment safely, efficiently, and to standard.
+          </p>
+
+          <p className="mb-6">
+            Licensed & insured. Straight talk, clear estimates, no fluff.
+          </p>
         </div>
 
         {/* Bottom CTAs */}
@@ -56,7 +61,7 @@ export default function AboutPage() {
             href="/book-inspection"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--sin-blue-700)] text-white font-medium hover:bg-[var(--sin-blue-600)] transition-colors"
           >
-            Book Same-Day
+            Book Same-Day Inspection
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
