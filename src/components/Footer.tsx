@@ -3,109 +3,11 @@ import BadgeRow from './BadgeRow';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--sin-blue-900)] py-16 lg:py-20">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          
-          {/* Brand Logo */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="block">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-1">Sinclair Restoration</h3>
-                <p className="text-sm text-white/70">Complete Mold Remediation</p>
-              </div>
-            </Link>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/services/mold-inspection" className="text-white/90 hover:text-white transition-colors">
-                  Mold inspection & testing
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/whole-home-remediation" className="text-white/90 hover:text-white transition-colors">
-                  Whole home mold remediation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/hvac-mold-prevention" className="text-white/90 hover:text-white transition-colors">
-                  HVAC mold prevention
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/water-damage-restoration" className="text-white/90 hover:text-white transition-colors">
-                  Water damage cleanup
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/crawlspace-remediation" className="text-white/90 hover:text-white transition-colors">
-                  Crawlspace mold treatment
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Additional Info */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Additional info</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-white/90 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/service-area" className="text-white/90 hover:text-white transition-colors">
-                  Service area
-                </Link>
-              </li>
-              <li>
-                <Link href="/learning" className="text-white/90 hover:text-white transition-colors">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-white/90 hover:text-white transition-colors">
-                  Terms and conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-white/90 hover:text-white transition-colors">
-                  Privacy policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="mailto:hello@sinclairrestoration.com" className="text-white/90 hover:text-white transition-colors">
-                  hello@sinclairrestoration.com
-                </a>
-              </li>
-              <li>
-                <span className="text-white/90">
-                  Greater New Orleans Area
-                </span>
-              </li>
-              <li>
-                <a href="tel:5044901624" className="text-white/90 hover:text-white transition-colors">
-                  (504) 490-1624
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <footer className="bg-[var(--sin-blue-900)] border-t border-white/10">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-8 py-12 lg:py-16">
         
         {/* Brand Promise & Badge Row */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="mb-8 pb-8 border-b border-white/10">
           <div className="space-y-4">
             {/* Brand Promise */}
             <p className="text-lg font-medium text-white/90 text-center">
@@ -139,10 +41,69 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
+        {/* Contact Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center">
+          <a 
+            href="tel:+15044901624" 
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            (504) 490-1624
+          </a>
+          <span className="hidden sm:inline text-white/50">•</span>
+          <a 
+            href="mailto:justin@sinclairrestoration.com" 
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            justin@sinclairrestoration.com
+          </a>
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-white/70 mb-6">
+          <Link href="/" className="hover:text-white transition-colors">
+            Home
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/services" className="hover:text-white transition-colors">
+            Services
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/service-area" className="hover:text-white transition-colors">
+            Service Area
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/about" className="hover:text-white transition-colors">
+            About
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/faq" className="hover:text-white transition-colors">
+            FAQ
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/contact" className="hover:text-white transition-colors">
+            Contact
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/privacy-policy" className="hover:text-white transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link href="/terms-of-service" className="hover:text-white transition-colors">
+            Terms of Service
+          </Link>
+        </nav>
+
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-white/10 text-center">
-          <p className="text-sm text-white/60">
+        <div className="text-center">
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Sinclair Restoration. All rights reserved.
           </p>
         </div>
