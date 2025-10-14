@@ -149,36 +149,15 @@ export default function Nav() {
             </Link>
 
 
-            {/* Learning Dropdown */}
-            <div className="relative" data-dropdown>
-              <button
-                onClick={() => handleDropdownToggle('learning')}
-                onKeyDown={(e) => handleKeyDown(e, 'learning')}
-                className={`flex items-center gap-1 text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
-                  pathname === '/learning' ? 'text-white underline' : 'text-white/90 hover:text-white'
-                }`}
-                aria-expanded={openDropdown === 'learning'}
-              >
-                Learning
-                <span className={`text-[12px] transition-transform duration-200 ${
-                  openDropdown === 'learning' ? 'rotate-180' : ''
-                }`}>▾</span>
-              </button>
-              
-              {openDropdown === 'learning' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-2xl border-subtle shadow-sm p-3 min-w-[160px]">
-                  <Link href="/blog" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Blog
-                  </Link>
-                  <Link href="/guides" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    Guides
-                  </Link>
-                  <Link href="/faq" className="block text-[14px] font-medium text-[var(--sin-neutral-700)] hover:text-link py-2">
-                    FAQ
-                  </Link>
-                </div>
-              )}
-            </div>
+            {/* FAQ Link */}
+            <Link 
+              href="/faq" 
+              className={`text-[15px] font-medium tracking-[-0.01em] transition-all underline-offset-4 hover:underline ${
+                pathname === '/faq' ? 'text-white underline' : 'text-white/90 hover:text-white'
+              }`}
+            >
+              FAQ
+            </Link>
 
             <Link 
               href="/service-area" 
@@ -301,33 +280,13 @@ export default function Nav() {
               </Link>
 
 
-              {/* Learning Accordion */}
-              <div>
-                <button
-                  onClick={() => handleMobileAccordionToggle('learning')}
-                  className="w-full flex items-center justify-between py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
-                  aria-expanded={openMobileAccordion === 'learning'}
-                  aria-controls="learning-mobile-panel"
-                >
-                  Learning
-                  <span className={`text-[12px] transition-transform duration-200 ${
-                    openMobileAccordion === 'learning' ? 'rotate-180' : ''
-                  }`}>▾</span>
-                </button>
-                {openMobileAccordion === 'learning' && (
-                  <div id="learning-mobile-panel" className="pl-4 space-y-2 pb-2">
-                    <Link href="/blog" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Blog
-                    </Link>
-                    <Link href="/guides" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      Guides
-                    </Link>
-                    <Link href="/faq" className="block text-[14px] font-medium text-[var(--sin-neutral-500)] hover:text-link py-2 transition-colors">
-                      FAQ
-                    </Link>
-                  </div>
-                )}
-              </div>
+              {/* FAQ Link */}
+              <Link 
+                href="/faq" 
+                className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
+              >
+                FAQ
+              </Link>
 
               {/* Service Area */}
               <Link 
