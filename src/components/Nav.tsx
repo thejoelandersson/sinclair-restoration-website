@@ -217,10 +217,20 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Mobile CTA + Hamburger */}
+          {/* Mobile CTAs + Hamburger */}
           <div className="flex items-center gap-3 lg:hidden">
-            <CTA href="/book-inspection" ariaLabel="Book an inspection">
-              Book inspection
+            {/* Call 24/7 Text Link (Mobile) */}
+            <a 
+              href="tel:+15044901624"
+              className="text-[15px] font-semibold text-white/90 hover:text-white transition-colors whitespace-nowrap"
+              aria-label="Call 24/7 at (504) 490-1624"
+              data-cta="header-call-24-7"
+            >
+              Call 24/7 • (504) 490-1624
+            </a>
+            
+            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
+              Book Inspection
             </CTA>
             
             {/* Hamburger Button */}
@@ -245,11 +255,33 @@ export default function Nav() {
             </button>
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <CTA href="/book-inspection" ariaLabel="Book an inspection">
-              Book inspection
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Call 24/7 Text Link (Desktop) */}
+            <a 
+              href="tel:+15044901624"
+              className="text-[15px] font-semibold text-white/90 hover:text-white transition-colors whitespace-nowrap"
+              aria-label="Call 24/7 at (504) 490-1624"
+              data-cta="header-call-24-7"
+            >
+              Call 24/7 • (504) 490-1624
+            </a>
+            
+            <CTA href="/book-inspection" ariaLabel="Book an Inspection">
+              Book Inspection
             </CTA>
+            
+            {/* Same-Day CTA (Desktop Only, hidden on smaller desktops if needed) */}
+            <div className="hidden xl:block">
+              <Link
+                href="/book-inspection"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-3 h-12 font-medium text-white bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-200 whitespace-nowrap"
+                aria-label="Book a Same-Day Inspection"
+                data-cta="header-book-same-day"
+              >
+                Book a Same-Day Inspection
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -388,7 +420,7 @@ export default function Nav() {
                 href="/book-inspection" 
                 className="block py-4 text-[16px] font-semibold text-[var(--sin-neutral-700)] hover:text-link transition-colors"
               >
-                Book inspection
+                Book Inspection
               </Link>
             </div>
           </div>
