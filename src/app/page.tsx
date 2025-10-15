@@ -29,13 +29,13 @@ export default function Home() {
                   Moisture-first. Ethical. Done right.
                 </p>
                 
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-                  <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection" className="whitespace-nowrap">
+                <div className="flex items-center flex-wrap justify-start gap-x-6 gap-y-3">
+                  <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection" className="flex-shrink-0">
                     Book Same-Day Inspection
                   </CTA>
                   
-                  {/* Badge Row - Inline with Button */}
-                  <div className="flex-1 lg:flex-none">
+                  {/* Badge Group - Directly beside Button */}
+                  <div className="flex items-center flex-wrap gap-x-5 gap-y-3">
                     <BadgeRow />
                   </div>
                 </div>
