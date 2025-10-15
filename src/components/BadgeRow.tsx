@@ -30,13 +30,6 @@ export default function BadgeRow({ className = '' }: BadgeRowProps) {
       <span className="hidden sm:inline text-[var(--sin-neutral-500)]">•</span>
       <span className="flex items-center gap-2">
         <svg className="w-4 h-4 text-[var(--sin-blue-700)]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
-        Same-day Service
-      </span>
-      <span className="hidden sm:inline text-[var(--sin-neutral-500)]">•</span>
-      <span className="flex items-center gap-2">
-        <svg className="w-4 h-4 text-[var(--sin-blue-700)]" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 1h2v2H7V5zm8 8v2h1v-2h-1zm-2-2h2v2h-2v-2zm-2 0h2v2h-2v-2zm-2 0h2v2H9v-2zm-2 0h2v2H7v-2z" clipRule="evenodd" />
         </svg>
         Locally Owned & Operated
