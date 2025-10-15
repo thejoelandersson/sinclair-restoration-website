@@ -78,22 +78,18 @@ export default function RequestCallbackPanel({
       }}
     >
       <div className="text-center">
-        <h1 className="text-[clamp(28px,3vw,32px)] leading-[1.2] tracking-[-0.01em] font-bold text-heading mb-4">
-          {title}
-        </h1>
+        <p className="text-[clamp(28px,3vw,32px)] leading-[1.2] tracking-[-0.01em] font-bold text-heading mb-6">
+          Call or text our team and we can help asap.
+        </p>
 
-        <div className="text-[15px] text-[var(--sin-neutral-500)] mb-8 space-y-1">
-          <p>
-            <a href="tel:+15044901624" className="text-link hover:underline">
-              Call 24/7: (504) 490-1624
-            </a>
-          </p>
-          <p>
-            <a href="mailto:justin@sinclairrestoration.com" className="text-link hover:underline">
-              Email: justin@sinclairrestoration.com
-            </a>
-          </p>
-        </div>
+        <a href="tel:+15044901624"
+           aria-label={`Call or text us at ${PHONE_MAIN}`}
+           className="inline-block text-heading font-semibold tracking-[-0.01em] leading-[0.98] whitespace-nowrap my-6"
+           style={{ fontSize: "clamp(30px, 6.5vw, 64px)" }}>
+          <span className="inline-block border-b border-current pb-1">{PHONE_MAIN}</span>
+        </a>
+
+        <p className="text-[15px] text-[var(--sin-neutral-500)] mb-8">This goes to a cell phone. We pick up or respond fast</p>
       </div>
 
       <hr className="border-subtle mb-6" />
