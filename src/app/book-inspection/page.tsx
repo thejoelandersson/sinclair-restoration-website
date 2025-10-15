@@ -67,10 +67,13 @@ export default function BookInspection() {
         {/* LEFT COPY */}
         <section className="max-w-[600px]">
           <p className="text-sm tracking-[0.08em] text-[var(--sin-neutral-500)]">SERVING GREATER NEW ORLEANS</p>
-          <h1 className="mt-2 text-[clamp(38px,4vw,44px)] font-bold tracking-[-0.01em] leading-[1.1] text-heading">Book your free virtual mold inspection or test</h1>
-          <div className="mt-4 space-y-6 text-[17px] leading-[1.5] text-[var(--sin-neutral-500)]">
-            <p>Send us a short video of the areas you&apos;re concerned about, and we&apos;ll share what we see—no site visit required.</p>
-            <p>If a professional in-person inspection or lab test is needed, we apply the inspection cost toward your total project price. That means if you decide to move forward with remediation, the inspection becomes fully deductible—essentially free.</p>
+          <h1 className="mt-2 text-[clamp(38px,4vw,44px)] font-bold tracking-[-0.01em] leading-[1.1] text-heading">Book Your Mold or Water Damage Inspection</h1>
+          <p className="mt-4 text-[17px] leading-[1.5] text-[var(--sin-neutral-500)]">
+            Fast, professional in-person inspections—same-day in core zones.
+          </p>
+          <div className="mt-6 space-y-6 text-[17px] leading-[1.5] text-[var(--sin-neutral-500)]">
+            <p>Our licensed technicians provide detailed on-site inspections to identify moisture sources, visible mold, and hidden damage. You&apos;ll receive a clear assessment, honest recommendations, and a written estimate before any work begins.</p>
+            <p>If you choose to move forward with remediation, your inspection fee is credited toward the total project cost.</p>
           </div>
         </section>
 
