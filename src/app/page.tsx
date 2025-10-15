@@ -73,90 +73,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our 5-Step Process Section */}
+      {/* What Is the Mold Remediation Process Section */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-heading leading-[1.1] mb-4">
-              Our 5-Step Process
+              What Is the Mold Remediation Process?
             </h2>
-            <p className="text-[17px] text-[var(--sin-neutral-500)]">
-              Every project follows the same proven, moisture-first method.
-            </p>
           </div>
 
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--sin-blue-700)] flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">1</span>
+          {/* Process Steps Carousel */}
+          <div className="relative">
+            {/* Steps Container */}
+            <div className="flex overflow-x-auto scrollbar-hide gap-8 pb-4">
+              {/* Step 1 */}
+              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">1</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-heading mb-3">Inspect</h3>
+                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                      Our certified technicians perform a complete on-site inspection using moisture meters and thermal imaging. We identify visible and hidden mold, diagnose leaks, and locate the true source of moisture before any removal begins.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-heading mb-3">Inspect</h3>
-              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-700)]">
-                We start by identifying the true source of moisture—not just visible mold. Using professional moisture meters and thermal imaging, we diagnose leaks, humidity issues, and hidden problem areas before any removal begins.
-              </p>
+
+              {/* Step 2 */}
+              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">2</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-heading mb-3">Contain</h3>
+                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                      We isolate affected areas to prevent cross-contamination. Using professional containment barriers, air scrubbers, and negative air pressure, we make sure mold spores stay sealed in until cleanup is complete.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">3</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-heading mb-3">Remove & HEPA Clean</h3>
+                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                      Contaminated materials are carefully removed and disposed of. All surfaces are then vacuumed using HEPA-grade filtration and antimicrobial cleaning to eliminate any residual mold particles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">4</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-heading mb-3">Treat Surfaces</h3>
+                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                      After removal, structural materials are treated with EPA-approved antimicrobial agents to prevent regrowth. Our technicians verify that moisture levels and humidity are fully controlled.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">5</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-heading mb-3">Independent Clearance</h3>
+                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                      Once remediation is finished, an independent third-party inspector performs clearance testing to ensure your home meets environmental safety standards before restoration begins.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--sin-blue-700)] flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">2</span>
-              </div>
-              <h3 className="text-lg font-semibold text-heading mb-3">Contain</h3>
-              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-700)]">
-                Proper containment keeps mold spores from spreading to unaffected areas. We isolate the workspace with plastic sheeting, apply negative air pressure, and follow IICRC standards for safety and compliance.
-              </p>
+            {/* Navigation Dots */}
+            <div className="flex justify-center items-center gap-2 mt-8">
+              <div className="w-3 h-3 rounded-full bg-[#2E509F]"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
             </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--sin-blue-700)] flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">3</span>
-              </div>
-              <h3 className="text-lg font-semibold text-heading mb-3">Remove & HEPA Clean</h3>
-              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-700)]">
-                Contaminated or damaged materials are carefully removed. All surfaces are then cleaned using HEPA-filtered vacuums and specialized antimicrobial solutions to eliminate fine particles and mold residue.
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--sin-blue-700)] flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">4</span>
-              </div>
-              <h3 className="text-lg font-semibold text-heading mb-3">Treat Surfaces</h3>
-              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-700)]">
-                After cleaning, we treat remaining structural materials to prevent regrowth. This includes targeted antimicrobial application and post-cleaning HEPA filtration to ensure air and surface quality meet remediation standards.
-              </p>
-            </div>
-
-            {/* Step 5 */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--sin-blue-700)] flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">5</span>
-              </div>
-              <h3 className="text-lg font-semibold text-heading mb-3">Independent Clearance</h3>
-              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-700)]">
-                When applicable, a licensed third-party assessor performs clearance testing to verify that moisture levels are normalized and the area is safe for re-entry. This ensures full transparency and independent confirmation of results.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="tel:+15044901624"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--sin-blue-700)] text-white font-medium hover:bg-[var(--sin-blue-600)] transition-colors"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              Call 24/7 • (504) 490-1624
-            </a>
-            <CTA href="/book-inspection" ariaLabel="Book a Same-Day Inspection">
-              Book Same-Day Inspection
-            </CTA>
           </div>
         </div>
       </section>

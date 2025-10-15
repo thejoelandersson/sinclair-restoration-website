@@ -56,3 +56,12 @@ body {
 .grad-hero { 
   background-image: linear-gradient(180deg, color-mix(in srgb, var(--sin-blue-700) 12%, white), var(--sin-blue-050)); 
 }
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
