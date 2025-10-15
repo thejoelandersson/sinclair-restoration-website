@@ -37,28 +37,34 @@ const processSteps: ProcessStep[] = [
 ];
 
 export default function ProcessCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const cardsPerView = {
-    desktop: 2,
-    tablet: 1.5,
+    desktop: 3,
+    tablet: 2,
     mobile: 1
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+  const totalPages = {
+    desktop: Math.ceil(processSteps.length / cardsPerView.desktop),
+    tablet: Math.ceil(processSteps.length / cardsPerView.tablet),
+    mobile: Math.ceil(processSteps.length / cardsPerView.mobile)
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % processSteps.length);
+  const goToPage = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + processSteps.length) % processSteps.length);
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages.desktop);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages.desktop) % totalPages.desktop);
   };
 
   // Handle keyboard navigation
@@ -66,10 +72,10 @@ export default function ProcessCarousel() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        prevSlide();
+        prevPage();
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        nextSlide();
+        nextPage();
       }
     };
 
@@ -137,35 +143,101 @@ export default function ProcessCarousel() {
               style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
             >
               <div 
-                className="flex transition-transform duration-300 ease-out"
+                className="flex transition-transform duration-300 ease-out gap-6"
                 style={{ 
-                  transform: `translateX(-${currentIndex * (100 / cardsPerView.desktop)}%)`,
-                  width: `${(processSteps.length / cardsPerView.desktop) * 100}%`
+                  transform: `translateX(-${currentPage * 100}%)`,
+                  width: `${totalPages.desktop * 100}%`
                 }}
               >
-                {processSteps.map((step, index) => (
-                  <div 
-                    key={index}
-                    className="flex-shrink-0 px-3 lg:px-4"
-                    style={{ width: `${100 / processSteps.length}%` }}
-                  >
-                    <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full">
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
-                            <span className="text-lg font-bold text-white">{step.number}</span>
+                {/* Page A: Steps 1, 2, 3 */}
+                <div className="flex-shrink-0 w-full flex gap-6">
+                  {[0, 1, 2].map((stepIndex) => {
+                    const step = processSteps[stepIndex];
+                    return (
+                      <div 
+                        key={stepIndex}
+                        className="flex-1"
+                        style={{ width: `calc((100% - 2*24px)/3)` }}
+                      >
+                        <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full">
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0">
+                              <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
+                                <span className="text-lg font-bold text-white">{step.number}</span>
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
+                              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                                {step.description}
+                              </p>
+                            </div>
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
-                          <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                            {step.description}
-                          </p>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Page B: Steps 4, 5, 1 */}
+                <div className="flex-shrink-0 w-full flex gap-6">
+                  {[3, 4, 0].map((stepIndex) => {
+                    const step = processSteps[stepIndex];
+                    return (
+                      <div 
+                        key={`b-${stepIndex}`}
+                        className="flex-1"
+                        style={{ width: `calc((100% - 2*24px)/3)` }}
+                      >
+                        <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full">
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0">
+                              <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
+                                <span className="text-lg font-bold text-white">{step.number}</span>
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
+                              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                                {step.description}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    );
+                  })}
+                </div>
+
+                {/* Page C: Steps 2, 3, 4 */}
+                <div className="flex-shrink-0 w-full flex gap-6">
+                  {[1, 2, 3].map((stepIndex) => {
+                    const step = processSteps[stepIndex];
+                    return (
+                      <div 
+                        key={`c-${stepIndex}`}
+                        className="flex-1"
+                        style={{ width: `calc((100% - 2*24px)/3)` }}
+                      >
+                        <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full">
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0">
+                              <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
+                                <span className="text-lg font-bold text-white">{step.number}</span>
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
+                              <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                                {step.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -174,8 +246,8 @@ export default function ProcessCarousel() {
           <div className="flex justify-center items-center gap-4 mt-8">
             {/* Left Arrow */}
             <button
-              onClick={prevSlide}
-              aria-label="Previous step"
+              onClick={prevPage}
+              aria-label="Previous steps"
               className="w-10 h-10 rounded-full bg-white text-[#2E509F] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,14 +257,14 @@ export default function ProcessCarousel() {
 
             {/* Pagination Dots */}
             <div className="flex items-center gap-2">
-              {Array.from({ length: 5 }, (_, index) => (
+              {Array.from({ length: 3 }, (_, index) => (
                 <button
                   key={index}
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Go to step ${index + 1}`}
-                  aria-current={index === currentIndex}
+                  onClick={() => goToPage(index)}
+                  aria-label={`Go to page ${index + 1}`}
+                  aria-current={index === currentPage}
                   className={`transition-all duration-200 rounded-full ${
-                    index === currentIndex 
+                    index === currentPage 
                       ? 'w-3 h-3 bg-[#2E509F]' 
                       : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
                   }`}
@@ -202,8 +274,8 @@ export default function ProcessCarousel() {
 
             {/* Right Arrow */}
             <button
-              onClick={nextSlide}
-              aria-label="Next step"
+              onClick={nextPage}
+              aria-label="Next steps"
               className="w-10 h-10 rounded-full bg-white text-[#2E509F] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
