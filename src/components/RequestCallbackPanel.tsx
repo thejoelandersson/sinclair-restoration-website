@@ -98,6 +98,11 @@ export default function RequestCallbackPanel({
 
       <hr className="border-subtle mb-6" />
 
+      {/* CTA Band Text */}
+      <h3 className="text-[18px] font-semibold text-heading text-center mb-6">
+        Urgent? Call now. Or send your info—we call back within 1 hour.
+      </h3>
+
       <form className="space-y-6" onSubmit={onSubmit}>
         <div>
           <label htmlFor="name" className="block text-[16px] font-medium text-heading mb-3">Name*</label>
@@ -188,6 +193,11 @@ export default function RequestCallbackPanel({
           </button>
           
           <p className="text-sm text-[var(--sin-neutral-500)] mt-4">We&apos;ll call you within 1 hour.</p>
+          
+          {/* Under-form Note */}
+          <p className="text-sm text-[var(--sin-neutral-500)] mt-4">
+            Urgent? Call now for fastest service.
+          </p>
         </div>
       </form>
     </div>
