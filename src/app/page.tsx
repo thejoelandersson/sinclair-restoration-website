@@ -2,6 +2,7 @@
 
 import CTA from '@/components/CTA';
 import BadgeRow from '@/components/BadgeRow';
+import ProcessCarousel from '@/components/ProcessCarousel';
 
 export default function Home() {
 
@@ -73,116 +74,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Is the Mold Remediation Process Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-heading leading-[1.1] mb-4">
-              What Is the Mold Remediation Process?
-            </h2>
-          </div>
-
-          {/* Process Steps Carousel */}
-          <div className="relative">
-            {/* Steps Container */}
-            <div className="flex overflow-x-auto scrollbar-hide gap-8 pb-4">
-              {/* Step 1 */}
-              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">1</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-heading mb-3">Inspect</h3>
-                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                      Our certified technicians perform a complete on-site inspection using moisture meters and thermal imaging. We identify visible and hidden mold, diagnose leaks, and locate the true source of moisture before any removal begins.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">2</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-heading mb-3">Contain</h3>
-                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                      We isolate affected areas to prevent cross-contamination. Using professional containment barriers, air scrubbers, and negative air pressure, we make sure mold spores stay sealed in until cleanup is complete.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">3</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-heading mb-3">Remove & HEPA Clean</h3>
-                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                      Contaminated materials are carefully removed and disposed of. All surfaces are then vacuumed using HEPA-grade filtration and antimicrobial cleaning to eliminate any residual mold particles.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">4</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-heading mb-3">Treat Surfaces</h3>
-                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                      After removal, structural materials are treated with EPA-approved antimicrobial agents to prevent regrowth. Our technicians verify that moisture levels and humidity are fully controlled.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-[#2E509F] flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">5</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-heading mb-3">Independent Clearance</h3>
-                    <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                      Once remediation is finished, an independent third-party inspector performs clearance testing to ensure your home meets environmental safety standards before restoration begins.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center items-center gap-2 mt-8">
-              <div className="w-3 h-3 rounded-full bg-[#2E509F]"></div>
-              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Process Carousel */}
+      <ProcessCarousel />
 
       {/* Mold Everywhere Section */}
       <section className="py-16 lg:py-24">
