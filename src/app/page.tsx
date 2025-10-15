@@ -2,7 +2,6 @@
 
 import CTA from '@/components/CTA';
 import BadgeRow from '@/components/BadgeRow';
-import ProcessCarousel from '@/components/ProcessCarousel';
 
 export default function Home() {
 
@@ -74,8 +73,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Carousel */}
-      <ProcessCarousel />
 
       {/* Mold Everywhere Section */}
       <section className="py-16 lg:py-24">
