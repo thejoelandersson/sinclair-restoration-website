@@ -42,6 +42,7 @@ export default function ProcessCarousel() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -54,7 +55,7 @@ export default function ProcessCarousel() {
 
   const totalSlides = processSteps.length;
   const visibleSlides = getVisibleSlides();
-  const pageCount = Math.ceil(totalSlides / visibleSlides);
+  const pageCount = visibleSlides === 3 ? 3 : Math.ceil(totalSlides / visibleSlides);
 
   // Update window width on resize
   useEffect(() => {
@@ -67,22 +68,37 @@ export default function ProcessCarousel() {
   const nextPage = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setStartIndex((prev) => (prev + visibleSlides) % totalSlides);
-    setTimeout(() => setIsAnimating(false), 300);
+    setCurrentPage(1); // Animate to next page
+    setTimeout(() => {
+      setStartIndex((prev) => (prev + visibleSlides) % totalSlides);
+      setCurrentPage(0); // Reset for next animation
+      setIsAnimating(false);
+    }, 300);
   };
 
   const prevPage = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setStartIndex((prev) => (prev - visibleSlides + totalSlides) % totalSlides);
-    setTimeout(() => setIsAnimating(false), 300);
+    setCurrentPage(-1); // Animate to prev page
+    setTimeout(() => {
+      setStartIndex((prev) => (prev - visibleSlides + totalSlides) % totalSlides);
+      setCurrentPage(0); // Reset for next animation
+      setIsAnimating(false);
+    }, 300);
   };
 
   const goToPage = (pageIndex: number) => {
     if (isAnimating) return;
+    const currentPageIndex = Math.floor(startIndex / visibleSlides) % pageCount;
+    if (pageIndex === currentPageIndex) return;
+    
     setIsAnimating(true);
-    setStartIndex((pageIndex * visibleSlides) % totalSlides);
-    setTimeout(() => setIsAnimating(false), 300);
+    setCurrentPage(pageIndex > currentPageIndex ? 1 : -1);
+    setTimeout(() => {
+      setStartIndex((pageIndex * visibleSlides) % totalSlides);
+      setCurrentPage(0);
+      setIsAnimating(false);
+    }, 300);
   };
 
   // Calculate active dot
@@ -137,9 +153,13 @@ export default function ProcessCarousel() {
     setDragOffset(0);
   };
 
+  // Build rotated queue for infinite loop
+  const queue = [...processSteps.slice(startIndex), ...processSteps.slice(0, startIndex)];
+  const visibleCards = queue.slice(0, visibleSlides);
+
   return (
     <section className="py-6 lg:py-8" role="region" aria-label="Mold remediation process">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+      <div className="w-screen px-6 md:px-8 lg:px-12 mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-heading leading-[1.1] mb-4">
             What Is the Mold Remediation Process?
@@ -160,7 +180,7 @@ export default function ProcessCarousel() {
 
             <div 
               ref={carouselRef}
-              className="overflow-hidden"
+              className="overflow-hidden w-full"
               onMouseDown={handleStart}
               onMouseMove={handleMove}
               onMouseUp={handleEnd}
@@ -173,40 +193,38 @@ export default function ProcessCarousel() {
               <div 
                 className="flex transition-transform duration-300 ease-out gap-6"
                 style={{ 
-                  transform: `translateX(${dragOffset}px)`,
-                  width: `${Math.ceil(totalSlides / visibleSlides) * 100}%`
+                  transform: `translateX(${currentPage * 100 + dragOffset}%)`,
+                  width: `${visibleSlides * 100}%`
                 }}
               >
-                {/* Render visible slides based on startIndex */}
-                {Array.from({ length: Math.ceil(totalSlides / visibleSlides) }, (_, pageIndex) => (
-                  <div key={pageIndex} className="flex-shrink-0 w-full flex gap-6">
-                    {Array.from({ length: visibleSlides }, (_, cardIndex) => {
-                      const stepIndex = (startIndex + pageIndex * visibleSlides + cardIndex) % totalSlides;
-                      const step = processSteps[stepIndex];
-                      return (
-                        <div 
-                          key={`${pageIndex}-${cardIndex}`}
-                          className="flex-1"
-                          style={{ width: `calc((100% - ${(visibleSlides - 1) * 24}px)/${visibleSlides})` }}
-                        >
-                          <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full">
-                            <div className="flex gap-4">
-                              <div className="flex-shrink-0">
-                                <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
-                                  <span className="text-lg font-bold text-white">{step.number}</span>
-                                </div>
-                              </div>
-                              <div className="flex-1">
-                                <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
-                                <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
-                                  {step.description}
-                                </p>
-                              </div>
-                            </div>
+                {/* Render only visible cards from queue */}
+                {visibleCards.map((step, cardIndex) => (
+                  <div 
+                    key={`${startIndex}-${cardIndex}`}
+                    className="flex-shrink-0"
+                    style={{ 
+                      width: visibleSlides === 1 
+                        ? '100%' 
+                        : visibleSlides === 2 
+                        ? 'calc((100% - 24px)/2)'
+                        : 'calc((100% - 48px)/3)'
+                    }}
+                  >
+                    <div className="bg-white rounded-[16px] p-6 shadow-sm border border-[var(--sin-border)] h-full min-h-[200px]">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-[#2E509F] flex items-center justify-center">
+                            <span className="text-lg font-bold text-white">{step.number}</span>
                           </div>
                         </div>
-                      );
-                    })}
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-heading mb-3">{step.title}</h3>
+                          <p className="text-[15px] leading-[1.5] text-[var(--sin-neutral-500)]">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
