@@ -73,7 +73,7 @@ export default function ProcessCarousel() {
       setStartIndex((prev) => (prev + visibleSlides) % totalSlides);
       setCurrentPage(0); // Reset for next animation
       setIsAnimating(false);
-    }, 300);
+    }, 500);
   };
 
   const prevPage = () => {
@@ -84,7 +84,7 @@ export default function ProcessCarousel() {
       setStartIndex((prev) => (prev - visibleSlides + totalSlides) % totalSlides);
       setCurrentPage(0); // Reset for next animation
       setIsAnimating(false);
-    }, 300);
+    }, 500);
   };
 
   const goToPage = (pageIndex: number) => {
@@ -98,7 +98,7 @@ export default function ProcessCarousel() {
       setStartIndex((pageIndex * visibleSlides) % totalSlides);
       setCurrentPage(0);
       setIsAnimating(false);
-    }, 300);
+    }, 500);
   };
 
   // Calculate active dot
@@ -191,7 +191,7 @@ export default function ProcessCarousel() {
               style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
             >
               <div 
-                className="flex transition-transform duration-300 ease-out gap-6"
+                className="flex transition-transform duration-500 ease-out gap-6"
                 style={{ 
                   transform: `translateX(${currentPage * 100 + dragOffset}%)`,
                   width: `${visibleSlides * 100}%`
@@ -203,6 +203,11 @@ export default function ProcessCarousel() {
                     key={`${startIndex}-${cardIndex}`}
                     className="flex-shrink-0"
                     style={{ 
+                      flex: `0 0 ${visibleSlides === 1 
+                        ? '100%' 
+                        : visibleSlides === 2 
+                        ? 'calc((100% - 24px)/2)'
+                        : 'calc((100% - 48px)/3)'}`,
                       width: visibleSlides === 1 
                         ? '100%' 
                         : visibleSlides === 2 
