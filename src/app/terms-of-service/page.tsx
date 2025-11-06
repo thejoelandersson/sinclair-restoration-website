@@ -145,6 +145,36 @@ export default function TermsOfServicePage() {
           <p className="mb-6">
             We may update these Terms periodically. Continued use of our website or services after updates constitutes acceptance of the revised Terms.
           </p>
+
+          <hr className="border-subtle my-8" />
+
+          <h2 className="text-[24px] font-semibold text-heading mb-4">Contact</h2>
+          <p className="mb-6">
+            For questions about these Terms, contact us at:
+          </p>
+          <div className="space-y-3 mb-6">
+            <p>
+              <strong>
+                <a href="mailto:justin@sinclairrestoration.com" className="text-link hover:underline">
+                  justin@sinclairrestoration.com
+                </a>
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <a href="tel:+15044901624" className="text-link hover:underline">
+                  (504) 490-1624
+                </a>
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <a href="https://maps.google.com/?q=4344+Earhart+Blvd+C,+New+Orleans,+LA+70125" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
+                  4344 Earhart Blvd C, New Orleans, LA 70125
+                </a>
+              </strong>
+            </p>
+          </div>
         </div>
       </div>
     </main>

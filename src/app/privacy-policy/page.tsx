@@ -92,13 +92,29 @@ export default function PrivacyPolicyPage() {
           <p className="mb-6">
             For any privacy questions or data requests, contact us at:
           </p>
-          <p className="mb-6">
-            <strong>
-              <a href="mailto:justin@sinclairrestoration.com" className="text-link hover:underline">
-                justin@sinclairrestoration.com
-              </a>
-            </strong>
-          </p>
+          <div className="space-y-3 mb-6">
+            <p>
+              <strong>
+                <a href="mailto:justin@sinclairrestoration.com" className="text-link hover:underline">
+                  justin@sinclairrestoration.com
+                </a>
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <a href="tel:+15044901624" className="text-link hover:underline">
+                  (504) 490-1624
+                </a>
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <a href="https://maps.google.com/?q=4344+Earhart+Blvd+C,+New+Orleans,+LA+70125" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
+                  4344 Earhart Blvd C, New Orleans, LA 70125
+                </a>
+              </strong>
+            </p>
+          </div>
         </div>
       </div>
     </main>

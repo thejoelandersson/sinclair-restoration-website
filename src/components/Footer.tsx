@@ -64,6 +64,18 @@ export default function Footer() {
             </svg>
             justin@sinclairrestoration.com
           </a>
+          <span className="hidden sm:inline text-white/50">•</span>
+          <a 
+            href="https://maps.google.com/?q=4344+Earhart+Blvd+C,+New+Orleans,+LA+70125" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+            </svg>
+            4344 Earhart Blvd C, New Orleans, LA 70125
+          </a>
         </div>
 
         {/* Navigation Links */}
