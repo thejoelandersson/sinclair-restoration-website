@@ -54,9 +54,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   />
 </head>
 
-<body>
-  {/* GTM noscript */}
-  <noscript>
+
+      <body className="antialiased min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+         <noscript>
     <iframe
       src="https://www.googletagmanager.com/ns.html?id=GTM-WMHHVLMC"
       height="0"
@@ -64,15 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       style={{ display: 'none', visibility: 'hidden' }}
     />
   </noscript>
-
-  {children}
-</body>
-
-      <body className="antialiased min-h-screen">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
         <Nav />
         {children}
         <Footer />
