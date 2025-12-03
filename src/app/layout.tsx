@@ -53,16 +53,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       `,
     }}
   />
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BLVM2HGKM">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2BLVM2HGKM');
-</script>
+       {/* Google Tag */}
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-2BLVM2HGKM`}></script>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2BLVM2HGKM');
+      `,
+    }}
+  />
 </head>
 
 
